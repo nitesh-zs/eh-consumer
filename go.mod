@@ -2,7 +2,10 @@ module github.com/nitesh-zs/eh-consumer
 
 go 1.17
 
-require github.com/krogertechnology/krogo v1.22.0
+require (
+	github.com/krogertechnology/data-loader v0.5.5
+	github.com/krogertechnology/krogo v1.22.0
+)
 
 require (
 	cloud.google.com/go v0.75.0 // indirect
@@ -24,6 +27,7 @@ require (
 	github.com/Azure/go-autorest/autorest/validation v0.2.0 // indirect
 	github.com/Azure/go-autorest/logger v0.2.1 // indirect
 	github.com/Azure/go-autorest/tracing v0.6.0 // indirect
+	github.com/PaesslerAG/gval v1.1.0 // indirect
 	github.com/Shopify/sarama v1.27.2 // indirect
 	github.com/aws/aws-sdk-go v1.38.17 // indirect
 	github.com/aws/aws-sdk-go-v2 v1.2.1 // indirect
@@ -92,7 +96,9 @@ require (
 	github.com/mattn/go-sqlite3 v1.11.0 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.1 // indirect
 	github.com/mercari/go-circuitbreaker v0.0.1 // indirect
+	github.com/mitchellh/copystructure v1.1.2 // indirect
 	github.com/mitchellh/mapstructure v1.1.2 // indirect
+	github.com/mitchellh/reflectwalk v1.0.1 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.1 // indirect
 	github.com/newrelic/go-agent v3.4.0+incompatible // indirect
