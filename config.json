@@ -2,6 +2,18 @@
   "input": {
     "type": "EVENTHUB"
   },
+  "layers": [
+    {
+      "type" : "filter",
+      "filter" :{
+        "column" : "data.eventHeader.type",
+        "condition" : "IN",
+        "values" : [
+          "event-imf-processed"
+        ]
+      }
+    }
+  ],
   "output": [
     {
       "type": "JSON",
