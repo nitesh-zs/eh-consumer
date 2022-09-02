@@ -1,0 +1,43 @@
+{
+  "input": {
+    "type": "EVENTHUB"
+  },
+  "layers": [
+    {
+      "type" : "filter",
+      "filter" :{
+        "column" : "data.eventHeader.type",
+        "condition" : "IN",
+        "values" : [
+          "event-imf-processed"
+        ]
+      }
+    }
+  ],
+  "output": [
+    {
+      "type": "JSON",
+      "target": "imf_out.json",
+      "batch_size": 1,
+      "schema": {
+        "imfID": "data.imfID",
+        "type": "data.type",
+        "imfStatus": "data.imfStatus",
+        "level1Gtin14": "data.level1Gtin14",
+        "caseGtin14": "data.caseGtin14",
+        "casePackQty": "data.casePackQty",
+        "consumers": "data.consumer",
+        "weekOfPeriod": "data.weekOfPeriod",
+        "period": "data.period",
+        "year": "data.year",
+        "division": "data.division",
+        "warehouse": "data.warehouse",
+        "catalogId": "data.categoryId",
+        "storeID": "data.storeID",
+        "fulfilmentSiteID": "data.fulfilmentSiteID",
+        "isMultiConsumerCase": "data.isMultiConsumerCase",
+        "isOcadoItem": "data.isOcadoItem"
+      }
+    }
+  ]
+}

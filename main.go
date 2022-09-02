@@ -8,14 +8,16 @@ import (
 func main() {
 	k := krogo.NewCMD()
 
-	k.GET("", IMFHandler)
+	k.GET("load", load)
 
 	k.Start()
 }
 
-func IMFHandler(c *krogo.Context) (i interface{}, err error) {
+func load(c *krogo.Context) (i interface{}, err error) {
+	configPath := c.PathParam("config")
+
 	// create new loader
-	l, err := loader.New(c, "config.json")
+	l, err := loader.New(c, configPath)
 	if err != nil {
 		return "Failed", err
 	}

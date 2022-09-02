@@ -10,6 +10,12 @@ EventHub consumer is a go application intended to be used by QA team for testing
 - The binaries present in `bin` folder can be used to run the consumer application.
 - Run the binary based on your system's architecture. `amd64` for intel chip macs and `arm64` for m1 macs.
 
-### Example command to run the consumer:
+### Command to consume IMF-Update events:
+``` bin/eventhub_consumer_arm64 load -config=imf_config.json ```
 
-``` bin/eventhub_consumer_arm64 ```
+The events data will be saved in `imf_out.json` file.
+
+### Command to consume BOH-Check events:
+``` bin/eventhub_consumer_arm64 load -config=boh_config.json ```
+
+The events data will be saved in `boh_out.json` file.

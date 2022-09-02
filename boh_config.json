@@ -1,0 +1,32 @@
+{
+  "input": {
+    "type": "EVENTHUB"
+  },
+  "layers": [
+    {
+      "type" : "filter",
+      "filter" :{
+        "column" : "eventHeader.type",
+        "condition" : "IN",
+        "values" : [
+          "event-boh-check"
+        ]
+      }
+    }
+  ],
+  "output": [
+    {
+      "type": "JSON",
+      "target": "boh_out.json",
+      "batch_size": 1,
+      "schema": {
+        "dltID": "data.dltID",
+        "fcLocationCode": "data.fcLocationCode",
+        "gtin": "data.gtin",
+        "skuQuantity": "data.skuQuantity",
+        "skuUnitOfMeasure": "data.skuUnitOfMeasure",
+        "stockPositionDateTime": "data.stockPositionDateTime"
+      }
+    }
+  ]
+}
