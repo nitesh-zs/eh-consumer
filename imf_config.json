@@ -6,7 +6,7 @@
     {
       "type" : "filter",
       "filter" :{
-        "column" : "data.eventHeader.type",
+        "column" : "eventHeader.type",
         "condition" : "IN",
         "values" : [
           "event-imf-processed"
@@ -23,18 +23,20 @@
         "imfID": "data.imfID",
         "type": "data.type",
         "imfStatus": "data.imfStatus",
-        "level1Gtin14": "data.level1Gtin14",
-        "caseGtin14": "data.caseGtin14",
-        "casePackQty": "data.casePackQty",
-        "consumers": "data.consumer",
-        "weekOfPeriod": "data.weekOfPeriod",
-        "period": "data.period",
-        "year": "data.year",
-        "division": "data.division",
-        "warehouse": "data.warehouse",
-        "catalogId": "data.categoryId",
-        "storeID": "data.storeID",
-        "fulfilmentSiteID": "data.fulfilmentSiteID",
+        "level1Gtin14": "data.gtin.level1Gtin14",
+        "caseGtin14": "data.gtin.caseGtin14",
+        "casePackQty": "data.gtin.casePackQty",
+        "consumer": "data.gtin.consumer",
+        "level2Gtin14": "data.gtin.level2Gtin14",
+        "level2Qty": "data.gtin.level2Qty",
+        "weekOfPeriod": "data.startDate.weekOfPeriod",
+        "period": "data.startDate.period",
+        "year": "data.startDate.year",
+        "division": "data.location.division",
+        "catalogID": "data.location.catalogID",
+        "storeID": "data.location.storeID",
+        "fulfilmentSiteID": "data.location.fulfilmentSiteID",
+        "warehouse": "data.location.warehouse",
         "isMultiConsumerCase": "data.isMultiConsumerCase",
         "isOcadoItem": "data.isOcadoItem"
       }
