@@ -5,6 +5,7 @@
   "layers": [
     {
       "type" : "filter",
+      "id": 1,
       "filter" :{
         "column" : "eventHeader.type",
         "condition" : "IN",
